@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../agendastyle.css">
+    <link rel="shortcut icon" type="image/jpg" href="../imagis/icone pag.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <title>Agendamento</title>
+</head>
+
+<body bgcolor=#E08B26>
+    <header>
+        <div class="logo">
+            <img src="../imagis/MicrosoftTeams-image (1).png" alt="logotipo animal patrol" class="fotoralha">
+        </div>
+
+        <!--A BARRA DE PESQUISA
+        <div id="divPesquisa">
+            <input type="text" id="txtPesquisa" placeholder="Buscar"/>
+            <img src="procurar.png" height="20" width="20" id="btnPesquisa" alt="Pesquisa"/>
+            </div> -->
+
+        <div class="botones"> <!--OS BOTÕES-->
+            <div class="butones">
+                <a href="../index.html">
+                    <p class="hello">Início</p>
+                </a>
+                <a href="">
+                    <p class="hello">Quem Somos</p>
+                </a>
+                <a href="login.html">
+                    <p class="hello">Login</p>
+                </a>
+                <a href="cadastro.html">
+                    <p class="hello">Cadastro</p>
+                </a>
+                <a href="#janela1" rel="modal">
+                    <p class="hello">Fale Conosco</p>
+                </a>
+
+                <div class="direitinha">
+                    <a href="https://www.instagram.com/animal_patrol2023/">
+                        <p class="hola"><img src="../imagis/instagram_branco.png" alt="instagram" class="fotoralha"></p>
+                    </a>
+                    <a href="">
+                        <p class="hola"><img src="../imagis/facebook_branco.png" alt="facebook" class="fotoralha"></p>
+                    </a>
+                    <a href="">
+                        <p class="hola"><img src="../imagis/icon_perfil.png" alt="perfil do usuário" class="fotoralha">
+                        </p>
+                    </a>
+                </div>
+
+                <div class="window" id="janela1">
+                    <form method="POST" class="formLogin">
+                        <h1>Nos envie uma mensagem</h1>
+                        <p>Nos informe sua experiência no nosso site para ajudar a melhorá-lo</p>
+                        <label for="text">Nome</label>
+                        <input type="text" placeholder="Digite seu nome" autofocus="true" required />
+                        <label for="email">E-mail</label>
+                        <input type="email" placeholder="Digite seu e-mail" autofocus="true" required />
+                        <label for="password">Sua Mensagem</label>
+                        <input type="text" placeholder="Digite sua mensagem" required />
+                        <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+                    </form>
+                </div>
+
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    $("a[rel=modal]").click(function (ev) {
+                        ev.preventDefault();
+                        var id = $(this).attr("href");
+                        var alturaTela = $(document).height();
+                        var larguraTela = $(window).width();
+
+                        //colocando o fundo preto
+                        $('#mascara').css({ 'width': larguraTela, 'height': alturaTela });
+                        $('#mascara').fadeIn(1000);
+                        $('#mascara').fadeTo("slow", 0.8);
+
+                        var left = ($(window).width() / 2) - ($(id).width() / 2);
+                        var top = ($(window).height() / 2) - ($(id).height() / 2);
+
+                        $(id).css({ 'top': top, 'left': left });
+                        $(id).show();
+                    });
+
+                    $("#mascara").click(function () {
+                        $(this).hide();
+                        $(".window").hide();
+                    });
+
+                    $('.fechar').click(function (ev) {
+                        ev.preventDefault();
+                        $("#mascara").hide();
+                        $(".window").hide();
+                    });
+                });
+            </script>
+
+            <!-- mascara para cobrir o site -->
+            <div id="mascara"></div>
+        </div>
+        </div>
+    </header>
+
+    <div class="titlo">
+        <h1>Faça o formulário aqui:</h1>
+    </div>
+    <form method="POST" class="formLogin">
+        <h1>Nos envie uma mensagem</h1>
+        <p>Nos informe sua experiência no nosso site para ajudar a melhorá-lo</p>
+        <label for="text">Nome</label>
+        <input type="text" placeholder="Digite seu nome" autofocus="true" required />
+        <label for="email">E-mail</label>
+        <input type="email" placeholder="Digite seu e-mail" autofocus="true" required />
+        <label for="password">Sua Mensagem</label>
+        <input type="text" placeholder="Digite sua mensagem" required />
+        <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+
+    </form>
+    </div>
+    <p></p><br>
+</body>
+
+</html>

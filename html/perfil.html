@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styleperfil.css"> 
+    <link rel="stylesheet" href="../perfilresp.css"> 
+    <link rel="shortcut icon" type="image/jpg" href="../imagis/icone pag.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../script.js"></script>
+    <title>Perfil</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../imagis/MicrosoftTeams-image (1).png" alt="logotipo animal patrol" class="fotoralha">
+        </div>
+
+        <div class="botones"> <!--OS BOTÕES-->
+           <div class="butones">
+            <div class="squerda">
+            <a class="hello" href="../index.html">
+                <p class="hello">Início</p>
+             </a>
+             <a class="hello" href="animal.html">
+                <p class="hello">Vacinas</p>
+             </a>
+             <a href="#janela1" rel="modal">
+                    <p class="hello">Fale Conosco</p>
+             </a>
+             </div>
+             <div class="direitinha">
+                <a href="https://www.instagram.com/animal_patrol2023/">
+                    <p class="hola"><img src="../imagis/instagram_branco.png" alt="instagram" class="redes"></p>
+                </a>
+                <a href="html/perfil.html">
+                    <p class="hola"><img src="../imagis/facebook_branco.png" alt="facebook" class="redes"></p>
+                </a>
+                <a href="#janela2" rel="login-cad">
+                    <p class="hola"><img src="../imagis/icon_perfil.png" alt="perfil do usuário" class="redes"></p>
+                </a>
+            </div>
+
+        <div class="window" id="janela1">  
+            <form method="POST" class="formLogin">
+                <h1>Nos envie uma mensagem</h1>
+                  <p>Nos informe sua experiência no nosso site para ajudar a melhorá-lo</p>
+                  <label for="text">Nome</label>
+                  <input type="text" placeholder="Digite seu nome" autofocus="true" required/>
+                  <label for="email">E-mail</label>
+                  <input type="email" placeholder="Digite seu e-mail" autofocus="true" required/>   
+                  <label for="password">Sua Mensagem</label>
+                  <input type="text" placeholder="Digite sua mensagem" required/>
+                  <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+                  
+              </form>           
+        </div>
+    </div>
+
+    <div id="maskra"></div>
+                <div class="janjela" id="janela2">
+                    <a href="html/login.html">
+                        <p class="log in">Login</p>
+                    </a>
+                    <a href="html/cadastro.html">
+                        <p class="log w">Cadastro</p>
+                    </a>
+                </div>
+            </div>
+    
+    <!-- mascara para cobrir o site --> 
+    <div id="mascara"></div>
+           </div>
+        </div>
+    </header>
+    <div class="bode">
+        <center>
+        <div class="direita">
+            <aside>
+                <center>
+                    <img class="icon" src="../imagis/perfil-de-usuario.png">
+                    <h1 class="nome-usu">Nome de usuário</h1>
+                </center>
+            </aside>
+            <br>
+            
+        </div>
+        <section>
+            <article>
+                <form method="POST" class="formLogin">
+                    <h1>Informações pessoais</h1>
+                    <p>Preencha esse formulário apenas caso tenha interesse em adotar algum animal ou agendar vacinação, <br>
+                    as informações serão analisadas pelo nosso grupo para sabermos se você está apto para cuidar de um animal.
+                    </p>
+                      <label for="text">Nome completo:</label>
+                        <input type="text" placeholder="Digite seu nome completo" autofocus="true" required/>
+                      <label for="date">Data de Nascimento</label>
+                        <input type="date" placeholder="Digite seu e-mail" autofocus="true" required/>   
+                      <label for="number">CPF</label>
+                        <input type="number" placeholder="xxx.xxx.xxx-xx" required/>
+                      <label for="text">Endereço</label>
+                        <input type="text" placeholder="Digite suas informações de moradia" required/>
+                        <div class="NAOSEI">
+                      <label for="radio">Você mora em casa ou predio?</label>
+                      <select name="vacina" id="" required>
+                        <option selected disabled value>Casa</option>
+                        <option value="">Prédio</option>
+                      </select>
+                        </div>
+                      <input type="submit" class="enviar" onclick="Enviar();" value="Enviar"/>
+                        
+                  </form>
+            </article>
+        </section>
+        <br></center>
+    </div>
+      
+
+    
+    
+    <!--BOTAO PRA LEVAR A TELA PRO TOPO--><a href="#" class="btn"></a>
+
+</body>
+</html>
